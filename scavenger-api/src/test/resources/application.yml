@@ -1,0 +1,15 @@
+scavenger:
+  collector-server-url: tmp
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:scavenger;MODE=MySQL;DB_CLOSE_DELAY=-1;CASE_INSENSITIVE_IDENTIFIERS=TRUE
+    username: scavenger
+    password: scavenger
+    driver-class-name: org.h2.Driver
+  profiles:
+    active: local
+
+server:
+  servlet:
+    context-path: /scavenger

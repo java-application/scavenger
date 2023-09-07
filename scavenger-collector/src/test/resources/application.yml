@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: scavenger-collector
+  datasource:
+    url: jdbc:h2:mem:scavenger;MODE=MySQL;DB_CLOSE_DELAY=-1;CASE_INSENSITIVE_IDENTIFIERS=TRUE
+    username: scavenger
+    password: scavenger
+    driver-class-name: org.h2.Driver
+  profiles:
+    active: local
+
+scavenger:
+  poll-interval-seconds: 60
+  publish-interval-seconds: 60
+  retry-interval-seconds: 60
+  diagnosis-directory: ./tmp
+
+armeria:
+  server-enabled: false
